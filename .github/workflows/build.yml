@@ -20,6 +20,7 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
+        if: github.ref_type == 'tag'
         with:
-          name: "BFBB Decompilation Guide"
+          name: "${{ github.ref_name }} — ${{ env.DATE }}"
           files: BFBBDecompilation.pdf
