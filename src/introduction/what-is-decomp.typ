@@ -44,21 +44,39 @@ Each programming language varies in ease of use, performance, safety, and other 
 
 Battle for Bikini Bottom is written in the *C++* programming language.
 // TODO: come back and link to proper chapter
-In later chapters we will discuss how this fact was discovered.
+In later chapters we will discuss how this fact was discovered
+and what implications it has on the decompilation project.
 
 C++ is a statically typed, compiled programming language
-first introduced in the mid 1980's.
+that has been around since 1985.
+It is a very common choice for building game engines
+because it generates extremely fast machine code
+while at the same time being expressive
+and generally straightforward to program in.
+
+The C++ compilation process involves
+a series of steps which translate
+the original human written source code
+into what ultimately results
+in an executable file.
+Refer to @compilation-process for an illustration of this process.
 
 ]
 
 #grid(
-  columns: (45%, 55%),
+  columns: (40%, 60%),
   left, 
-  figure(
+  [#figure(
     caption: [The C++ compilation process],
     image("img/compilation.png")
-  )
+  )<compilation-process>]
 )
+
+If the compilation process is a series of steps 
+from $A -> B$,
+then the decompilation process is simply the same process in reverse
+from $B -> A$,
+and it looks like this:
 
 #figure(
   caption: [The decompilation process],
