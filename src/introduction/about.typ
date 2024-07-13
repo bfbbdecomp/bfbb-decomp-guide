@@ -14,6 +14,9 @@ The main goal of this book is to act as a complete guide that can take someone
 (with the #link(<knowledge>, [#underline[required prerequisite knowledge]]))
 from zero understanding of decompilation and assembly code to being able to read, understand, and 
 decompile BFBB's C++ source code and corresponding assembly code.
+It also aims to answer any and all questions
+that you might have related to any aspect of the project.
+
 
 So what does this mean for you?
 
@@ -21,6 +24,8 @@ If you read through this book
 you will learn about BFBB's game engine,
 the decompilation process,
 and how C++ code translates to assembly.
+You will see examples of how real game functions are decompiled
+from nothing but bytes.
 You will deepen your understanding of computer science,
 You will gain the knowledge required to be able to create your own custom mods
 and builds of BFBB.
@@ -103,6 +108,7 @@ or why we are adding instead of dividing,
 or what the formula means.
 You just have to solve for $x$ and that's it.
 When you realize that $x = 3$ you're done.
+You can forget about it and move on.
 
 The decompilation process is similar.
 Generally speaking there is only one way to write code
