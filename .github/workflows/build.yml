@@ -26,4 +26,4 @@ jobs:
         if: github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: main.pdf
+          files: src/main.pdf
