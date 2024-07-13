@@ -2,7 +2,7 @@ name: Build Decompilation Guide
 on: push
 
 jobs:
-  build_typst_documents:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -11,3 +11,9 @@ jobs:
         uses: lvignoli/typst-action@main
         with:
           source_file: src/main.typ
+
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF
+          path: BFBBDecompilation.pdf
