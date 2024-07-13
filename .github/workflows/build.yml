@@ -19,11 +19,11 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: BFBBDecompilation.pdf
+          path: main.pdf
 
       - name: Release
         uses: softprops/action-gh-release@v1
         if: github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: BFBBDecompilation.pdf
+          files: main.pdf
