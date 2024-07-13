@@ -87,5 +87,5 @@ It's important to understand that going in reverse is not something that can be 
 Decompilation requires reverse engineering the machine code to understand the intent,
 and rewriting code at a high level which matches the same logic.
 
-The process is like trying to deduce the original recipe used to make a cake,
+The decompilation process is like trying to deduce the original ingredients used to make a cake,
 except the only thing you have to work with is the cake which has already been baked.
