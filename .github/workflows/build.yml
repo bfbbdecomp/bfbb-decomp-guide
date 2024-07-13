@@ -17,3 +17,9 @@ jobs:
         with:
           name: PDF
           path: BFBBDecompilation.pdf
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "BFBB Decompilation Guide"
+          files: BFBBDecompilation.pdf
