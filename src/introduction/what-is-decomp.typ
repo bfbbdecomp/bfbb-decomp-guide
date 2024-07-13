@@ -57,8 +57,8 @@ and generally straightforward to program in.
 The C++ compilation process involves
 a series of steps which translate
 the original human written source code
-into what ultimately results
-in an executable file.
+into what ultimately becomes
+an executable file.
 Refer to @compilation-process for an illustration of this process.
 
 ]
@@ -75,10 +75,17 @@ Refer to @compilation-process for an illustration of this process.
 If the compilation process is a series of steps 
 from $A -> B$,
 then the decompilation process is simply the same process in reverse
-from $B -> A$,
+from $B -> A$.
 and it looks like this:
 
 #figure(
   caption: [The decompilation process],
   image("img/decompilation.png", width: 70%)
 )
+
+It's important to understand that going in reverse is not something that can be done automatically in the same way that source code is compiled to machine code.
+Decompilation requires reverse engineering the machine code to understand the intent,
+and rewriting code at a high level which matches the same logic.
+
+The process is like trying to deduce the original recipe used to make a cake,
+except the only thing you have to work with is the cake which has already been baked.
