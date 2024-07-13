@@ -1,5 +1,6 @@
 #include "cover.typ"
 
-#outline()
-#include "introduction/intro.typ"
-hey
+#outline(indent: 2em)
+
+#include "introduction/main.typ"
+
