@@ -7,11 +7,13 @@
 
 #include "introduction/main.typ"
 #include "bfbb-technical/main.typ"
-#include "repository/main.typ"
+#include "decomp-overview/main.typ"
+#include "repo-overview/main.typ"
 #include "tools.typ"
 #include "asm-concepts/main.typ"
 #include "cpp-concepts/main.typ"
 #include "heavy-iron-code/main.typ"
+#include "compiler-flags/main.typ"
 #include "decomp-guide/main.typ"
 #include "asm-patterns/main.typ"
 

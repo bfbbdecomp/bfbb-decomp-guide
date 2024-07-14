@@ -1,8 +1,6 @@
+= Repository Layout
 
-
-== Repository Layout
-
-=== DTK
+== DTK
 
 Repository Layout
 

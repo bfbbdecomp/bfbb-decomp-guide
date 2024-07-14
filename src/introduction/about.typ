@@ -87,8 +87,8 @@ You will learn these things while reading this book:
 + Math, or anything related to 3D programming
 + Game development or game programming techniques
 
-#quote(attribution: [You, probably right now], block: true)[
-But how can we decompile a 3D game without needing to know game programming or 3D math?
+#quote(attribution: [You, probably], block: true)[
+"But how can we reverse engineer a 3D game without needing to know game programming or 3D math?"
 ]
 // TODO: link to the idea later
 Great question!
