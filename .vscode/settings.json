@@ -1,3 +1,14 @@
 {
-  "cSpell.words": ["decomp", "decompiled", "Ghidra", "Typst"]
+  "cSpell.words": [
+    "decomp",
+    "decompiled",
+    "Ghidra",
+    "objdiff",
+    "rodata",
+    "sbss",
+    "sdata",
+    "Typedefs",
+    "Typst",
+    "Werks"
+  ]
 }

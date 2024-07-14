@@ -4,7 +4,6 @@
 
 #include "about.typ"
 #include "what-is-decomp.typ"
-#include "bfbb.typ"
 
 // About This Book
   // What you will learn
