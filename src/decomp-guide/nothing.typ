@@ -262,4 +262,35 @@ And that's that.
 
 2. Why are functions that do nothing even in the game?
 
-This is a commonly asked question
+This is a commonly asked question for a good reason and there are multiple answers.
+
+A common reason might be that the original game code
+had certain debugging code that might have been stripped out
+during the release build.
+There are at least 35 empty functions that contain the word "debug" that do nothing.
+`zNPCBPlankton::render_debug()` for example.
+You can imagine that the actual source code for this probably looked something like this:
+```cpp
+void zNPCBPlankton::render_debug()
+{
+    #ifdef DEBUG
+    // ...
+    // A bunch of code to debug the plankton boss...
+    // ...
+    #endif
+}
+```
+Naturally when releasing, none of that code would have been included,
+leaving us with empty functions.
+These functions are still included in the game
+and not optimized out by the compiler despite being empty in this case
+because they are called from other areas of the code.
+The compiler isn't smart enough to know that the function call itself
+wouldn't create side effects, so it keeps the function in the game
+despite it doing nothing in a release build.
+
+Whew. This was a longer chapter than anticipated,
+but we have learned quite a lot.
+Whenever you're ready let's head on to the next example
+and start decompiling functions that have
+some actual code in them.
