@@ -50,7 +50,7 @@ You have an opportunity to become a part of gaming history.
 Reverse engineering is an advanced topic.
 The goal of this book is to break it down into digestible parts
 that make it easy to follow along and learn.
-However, the contents of this book are written in a way that assumes that the reader 
+However, the contents of this book are written in a way that assumes that the reader
 has a comfortable foundational understanding of programming and computer science.
 
 === What you need to know
@@ -64,7 +64,6 @@ Here are a list of things that you #underline([do]) need to know before reading 
   - Callback Functions
   - Casting
 + Have an enthusiasm for BFBB and/or reverse engineering
-+ How to use Git
 
 Note that a lack of experience with C++ can be made up for with a solid understanding of programming in general.
 What ultimately matters is that you have a solid understanding of how to write code.
@@ -86,14 +85,15 @@ You will learn these things while reading this book:
 + How to use Ghidra or other binary analysis/reverse engineering tools
 + Math, or anything related to 3D programming
 + Game development or game programming techniques
++ Version Control or how to use Git
 
 #quote(attribution: [You, probably], block: true)[
-"But how can we reverse engineer a 3D game without needing to know game programming or 3D math?"
+  "But how can we reverse engineer a 3D game without needing to know game programming or 3D math?"
 ]
 // TODO: link to the idea later
 Great question!
 We will explain this idea in more detail later,
-but the answer is surprisingly simple: 
+but the answer is surprisingly simple:
 The compiler will tell you if you're right or wrong.
 
 For now think of it like this:
