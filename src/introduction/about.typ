@@ -11,8 +11,8 @@ the 2003 platform game "SpongeBob SquarePants: Battle for Bikini Bottom" (BFBB) 
 === What you will learn
 
 The main goal of this book is to act as a complete guide that can take someone
-(with the #link(<knowledge>, [#underline[required prerequisite knowledge]]))
-from zero understanding of decompilation and assembly code to being able to read, understand, and 
+(with the #link(<knowledge>)[#underline[required prerequisite knowledge]]
+from zero understanding of decompilation and assembly code to being able to read, understand, and
 decompile BFBB's C++ source code and corresponding assembly code.
 It also aims to answer any and all questions
 that you might have related to any aspect of the project.
