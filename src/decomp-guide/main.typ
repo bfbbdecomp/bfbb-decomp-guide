@@ -2,10 +2,10 @@
 #let functions = (
   ("The Simplest Function: Nothing", <fn.nothing>, "nothing.typ"),
   ("Returning Values", <fn.return>, "return.typ"),
-  ("A Function with Some Logic", <fn.small>, "return.typ"),
-  ("A Function with a For Loop", <fn.for>, "return.typ"),
-  ("A Function with a Switch Statement", <fn.switch>, "return.typ"),
-  ("A Large Function", <fn.large>, "return.typ"),
+  // ("A Function with Some Logic", <fn.small>, "return.typ"),
+  // ("A Function with a For Loop", <fn.for>, "return.typ"),
+  // ("A Function with a Switch Statement", <fn.switch>, "return.typ"),
+  // ("A Large Function", <fn.large>, "return.typ"),
 )
 
 
