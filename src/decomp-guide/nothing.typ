@@ -19,7 +19,7 @@ In C++ a function that does nothing could look like this:
   {
       return;
   }
-  ```
+  ```,
 )
 
 Note that we can choose whether or not to write the `return;` keyword.
@@ -32,16 +32,16 @@ It doesn't make a difference whether we write it out or not.
     so both of these functions
     are compiled down to a single `blr` assembly instruction:
   ],
-  image("nothing/nothing.png")
+  image("nothing/nothing.png"),
 )
 
 What does the assembly instruction `blr` mean?
 
 #v(0.5cm)
-/ blr: "Branch to Link Register".  Jumps to lr.  Used to end a subroutine.
+/ blr: "Branch to Link Register". Jumps to lr. Used to end a subroutine.
 #v(0.5cm)
 
-What is a Link Register?
+=== What is a Link Register?
 
 _A link register (LR for short) is a register which holds the address to return to when a subroutine call completes. This is more efficient than the more traditional scheme of storing return addresses on a call stack, sometimes called a machine stack. The link register does not require the writes and reads of the memory containing the stack which can save a considerable percentage of execution time with repeated calls of small subroutines.
 The IBM POWER architecture, and its PowerPC and Power ISA successors, have a special-purpose link register, into which subroutine call instructions put the return address._
@@ -65,7 +65,7 @@ $0.07%$ of the entire game's code does nothing!
 Since we have a general idea of what an empty function is like,
 let's now decompile an empty function in BFBB.
 
-==== Our First Function -- NPCWidget::Reset()
+=== Our First Function -- NPCWidget::Reset()
 We are going to look at the function `NPCWidget::Reset()`.
 It is a size 4 function located in the file
 `/Game/zNPCSupport.cpp`.
@@ -77,7 +77,7 @@ we can see the original assembly on the left, and nothing on the right.
 
 We can see that the original assembly on the left just has one instruction,
 a `blr` instruction like we expect.
-When the right side says "Missing", this means that 
+When the right side says "Missing", this means that
 we have yet to define the function in our game source file.
 This is to be expected at this point because we haven't decompiled this function yet.
 
@@ -150,7 +150,7 @@ After we do this, Objdiff thanks us for our effort by greeting us with a new err
 
 Again, the error message is pretty clear.
 We need to define `en_NPC_UI_WIDGETS`.
-Once again, we can't find this enum defined anywhere in 
+Once again, we can't find this enum defined anywhere in
 our source header files yet, so it means that it hasn't
 been copied over yet.
 Let's do that now.
@@ -166,7 +166,7 @@ enum en_NPC_UI_WIDGETS {
 ```
 
 Once again, we want to copy this type over into our `zNPCSupport.h` file.
-We have to make sure that we put this definition before the definition of 
+We have to make sure that we put this definition before the definition of
 `NPCWidget`, as that class references the enum.
 
 Back in Objdiff, unsurprisingly, we have another error:
@@ -242,11 +242,11 @@ so solving the type errors would be as simple as including the appropriate heade
 #include "xVec3.h"
 #include "zFX.h"
 ```
- If we didn't already have those types defined in those header files,
- you would have to copy the types for these parameters from
- the PS2 DWARF again. 
- This is needed to get the file to compile
- despite the fact that the function itself does nothing.
+If we didn't already have those types defined in those header files,
+you would have to copy the types for these parameters from
+the PS2 DWARF again.
+This is needed to get the file to compile
+despite the fact that the function itself does nothing.
 
 Then of course there are functions like `NPCWidget_Shutdown`
 which are not part of a class nor accept any parameters,
