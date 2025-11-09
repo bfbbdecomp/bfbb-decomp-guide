@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Typst
         uses: lvignoli/typst-action@main
         with:
@@ -21,9 +22,39 @@ jobs:
           name: PDF
           path: src/main.pdf
 
-      - name: Release
+      - name: Get current date for release
+        id: date
+        if: github.ref_type == 'tag'
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Format tag for release
+        id: format_tag
+        if: github.ref_type == 'tag'
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          TAG="$TAG_NAME"
+          # normalize separators to spaces
+          TAG="${TAG//_/ }"
+          TAG="${TAG//-/ }"
+          # split and capitalize each word
+          read -ra parts <<< "$TAG"
+          pretty=""
+          for w in "${parts[@]}"; do
+            if [[ -z "$w" ]]; then continue; fi
+            first="${w:0:1}"
+            rest="${w:1}"
+            pretty+="${first^^}${rest} "
+          done
+          pretty="${pretty% }"
+          echo "formatted tag: '$pretty'"
+          echo "::set-output name=pretty::$pretty"
+
+      - name: Create release
         uses: softprops/action-gh-release@v1
         if: github.ref_type == 'tag'
         with:
-          name: "${{ github.ref_name }} — ${{ env.DATE }}"
+          name: "${{ steps.format_tag.outputs.pretty }} — ${{ steps.date.outputs.date }}"
           files: src/main.pdf
+
+
