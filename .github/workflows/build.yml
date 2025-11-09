@@ -25,7 +25,7 @@ jobs:
       - name: Get current date for release
         id: date
         if: github.ref_type == 'tag'
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Format tag for release
         id: format_tag
@@ -48,7 +48,7 @@ jobs:
           done
           pretty="${pretty% }"
           echo "formatted tag: '$pretty'"
-          echo "::set-output name=pretty::$pretty"
+          echo "pretty=$pretty" >> $GITHUB_OUTPUT
 
       - name: Create release
         uses: softprops/action-gh-release@v1
